@@ -1,19 +1,14 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import LeftHome from './components/HomeLeft.vue'
+import TheMap from './components/MapView.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="MockHub" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="We did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
+  <LeftHome />
+ 
+  <main class="rightPanel">
+    <TheMap />
   </main>
 </template>
 
@@ -26,7 +21,16 @@ header {
   display: block;
   margin: 0 auto 2rem;
 }
-
+.rightPanel{
+  background-image: url("./assets/indiaMap.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  place-items: center;
+  background-color:rgba(0,0,0,0.5);
+  flex: 1 1 auto;
+}
 @media (min-width: 1024px) {
   header {
     display: flex;
