@@ -2,12 +2,14 @@
 import TheWelcome from './components/TheWelcome.vue'
 import LeftHome from './components/HomeLeft.vue'
 import TheMap from './components/MapView.vue'
+import Header from './components/Header.vue'
 </script>
 
 <template>
   <LeftHome />
  
   <main class="rightPanel">
+    <Header msg="To Pin Your Property" />
     <TheMap />
   </main>
 </template>
@@ -30,6 +32,8 @@ header {
   place-items: center;
   background-color:rgba(0,0,0,0.5);
   flex: 1 1 auto;
+  flex-direction: column;
+  place-items: center right;
 }
 @media (min-width: 1024px) {
   header {
